@@ -6,10 +6,10 @@ Este repositório é um template para os grupos da disciplina. A proposta é com
 
 ## Integrantes do grupo
 
-- Nome do integrante 1
-- Nome do integrante 2
-- Nome do integrante 3
-- Nome do integrante 4
+- David Aurélio Pedrosa
+- Saul de Castro Macedo
+- Tiago Belico de Oliveira e Silva
+
 
 ## Estrutura do projeto
 
