@@ -3,9 +3,15 @@ def calcular_pontos(pontos_atual, pontos_ganhos):
     return pontos_atual + pontos_ganhos
 
 
+
+
 def tomar_dano(vida_atual, dano):
     """Reduz a vida atual com base no dano recebido."""
     return vida_atual - dano
+
+def recuperar_vida(vida_atual, vida):
+    # função para   recuperar vida quando a nave pegar o kit de reparo
+    return vida_atual + vida
 
 
 def jogador_perdeu(vidas):
