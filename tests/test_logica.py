@@ -1,4 +1,4 @@
-from src.funcoes import calcular_pontos, jogador_perdeu, limitar_valor
+from src.funcoes import calcular_pontos, jogador_perdeu, limitar_valor, tomar_dano, recuperar_vida
 
 
 def test_calcular_pontos():
@@ -29,3 +29,27 @@ def test_limitar_valor_acima_do_maximo():
 def test_limitar_valor_dentro_do_intervalo():
     """Deve manter o valor original quando ele ja estiver no intervalo."""
     assert limitar_valor(50, 0, 100) == 50
+
+
+#área de testes  para as funções tomar dano e recuperar vida
+
+def test_tomar_dano():
+    assert tomar_dano(3, 1) == 2
+
+def test_tomar_dano():
+    assert tomar_dano(3, 2) == 1  
+
+def test_tomar_dano_ate_zerar():
+    assert tomar_dano(3,3) == 0
+
+
+def test_recuperar_vida():
+    assert recuperar_vida(1, 1) == 2
+
+def test_recuperar_vida():
+    assert recuperar_vida(2, 1) == 3
+
+#essa função de baixo é para ver se o sistema de  quando as vidas estiverem cheias não acontecer nada
+
+def test_recuperar_vida_max():
+    assert recuperar_vida(3, 1) == 3

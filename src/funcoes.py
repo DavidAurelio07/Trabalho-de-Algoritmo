@@ -11,7 +11,10 @@ def tomar_dano(vida_atual, dano):
 
 def recuperar_vida(vida_atual, vida):
     # função para   recuperar vida quando a nave pegar o kit de reparo
-    return vida_atual + vida
+    #verificar de se a vida é menor que 3 pois se tiver com 3 ele não pode pegar o KIT
+    if vida_atual < 3:
+        return vida_atual + vida
+    return 3
 
 
 def jogador_perdeu(vidas):

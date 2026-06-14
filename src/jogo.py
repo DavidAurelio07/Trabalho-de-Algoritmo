@@ -56,7 +56,7 @@ def executar_jogo():
         "imagem": nave_image,
         "rect": nave_image.get_rect(topleft=(350, 600))
     }
-    nave["rect"].inflate_ip(-70,70)
+    nave["rect"].inflate_ip(-70,20)
 
     kit= {
         "imagem": kit_image,
@@ -127,8 +127,9 @@ def executar_jogo():
         kit["rect"].y += 5
 
         if kit["rect"].y > ALTURA_TELA:
-            kit["rect"].y = 0
             kit["rect"].x = random.randint(0,LARGURA_TELA - kit["rect"].width)    
+            kit["rect"].y = random.randint(-300,-50)
+
 
 
         # Limitando o jogador dentro das bordas da tela usando as propriedades do Rect
@@ -143,7 +144,7 @@ def executar_jogo():
                 vidas = recuperar_vida(vidas,1)
 
                 kit["rect"].x = random.randint( 0, LARGURA_TELA - kit["rect"].width ) 
-                kit["rect"].y = random.randint( 0, ALTURA_TELA - kit["rect"].height )
+                kit["rect"].y = random.randint(-300, -50)
                 
 
             
